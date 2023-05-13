@@ -1,3 +1,146 @@
-#heading{
+#heading {
     color: red;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightslategray;
+}
+
+.logo {
+    width: 150px;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li {
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+
+.search {
+    margin : 15px;
+}
+
+.res-card {
+    width: 215px;
+    padding: 15px;
+}
+
+.res-card:hover {
+    border: 1px solid lightgray;
+    cursor: pointer;
+   
+}
+
+.res-logo > img{
+    width: 100%;
+    padding: 5px;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.res-filter {
+    cursor: pointer;
+}
+
+.search-filters {
+    margin: 10px;
+    display: flex;
+}
+
+.filters, .search-bar {
+    margin: 10px;
+}
+
+.shimmer-card {
+    height: 200px;
+    width: 225px;
+    margin: 10px;
+    background: lightgray;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 150px;
+    background: lightgray;
+    border: 1px solid lightslategray;
+    margin-top : 5px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.dish {
+    display: flex;
+    border: 1px solid lightgray;
+    width: 40%;
+    margin: 10px 50px;
+}
+
+.dish-logo img {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+}
+
+.restaurant-banner {
+   border: 1px solid lightgray;
+   margin: 20px;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+}
+
+.signup > input {
+    width: 200px;
+}
+
+.signup > label {
+  margin-top: 1rem;
+  display: block;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup > button {
+    margin-top: 1rem;
+    display: block;
+    width: 100px;
+    height: 30px;
+    background: green;
+    color: white;
+}
+
+.signup > form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.signup > .error {
+    color: red;
+    padding: 3px;
+    font-family: monospace;
 }
