@@ -34,7 +34,7 @@ const RestaurantMenu = () => {
             {
                 <RestaurantBanner restaurantInfo = {restaurantInfo}/>
             }
-            <div className='dishes'>
+            <div className="flex flex-wrap">
             {restaurant.map((recipe)=>
                (<Dish key={recipe.card.info.id}  dish={recipe.card.info}/>)
             )}

@@ -4,14 +4,14 @@ const Dish = (props) => {
     const {name, imageId, price, category, description} = props.dish;  
 
     return (
-        <div className="dish">
+        <div className="h-auto p-3 m-3  rounded-md w-72 shadow-xl">
             <div className="dish-logo">
-                <img src={CDN_LINK + imageId}/>
+                <img className="w-64" src={CDN_LINK + imageId}/>
             </div>
-            <div className="dish-description">
-                <h3>{name}</h3>
+            <div className="font-mono">
+                <h3 className="font-bold">{name}</h3>
                 <div>₹{price/100}</div>
-                <div>{category}</div>
+                <div className="font-semibold">{category}</div>
                 <div>{description}</div>
             </div>
         </div>

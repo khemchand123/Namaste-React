@@ -1,4 +1,4 @@
-import React, { lazy, Suspense} from "react";
+import React, { lazy, Suspense, useState} from "react";
 import ReactDOM from "react-dom/client";
 
 import Header from './components/Header';
@@ -15,18 +15,33 @@ import Contact from "./components/Contact";
 import SignUp from "./components/SignUp";
 import Profile from "./components/ProfileClass";
 //import Instamart from './components/Instamart';
+import UserContext from "./utils/userContext";
 
 const Instamart = lazy(()=> import("./components/Instamart"));
 
 
 
 const AppLayout = () => {
+
+  const [user, setUser] = useState({
+    name : "Khem Chand",
+    email: "Khem.Chand@cognizant.com"
+  });
+
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <UserContext.Provider value={
+         {
+          user: user,
+          setUser
+        }
+    }>
+      <div className="app">
+         <Header />
+         <Outlet />
+         <Footer />
+      </div>
+    </UserContext.Provider>
+    
   );
 };
 
