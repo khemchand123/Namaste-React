@@ -9,7 +9,8 @@ const useRestaurants = () => {
     }, []);
 
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=29.3862327&lng=76.9572233&page_type=DESKTOP_WEB_LISTING");
+        //https://www.swiggy.com/dapi/restaurants/list/v5?lat=29.3862327&lng=76.9572233&page_type=DESKTOP_WEB_LISTING
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5904779&lng=73.7271909&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
         setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);
